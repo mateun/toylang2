@@ -20,11 +20,8 @@ int main(int argc, char** args) {
 		V_MAJ, V_MIN, V_PAT);		
 
 	Lexer l;
-	
 	std::string source = readSourceFromStdIn();
-
 	std::vector<Token> tokens =  
-			//l.lex("foo=70\n 12 +89-  78/ 9 * 23 baz=986*2");		
 			l.lex(source);		
 	for (auto& t : tokens) {
 		printf("tok: %s", tokenById(t.type).c_str());			
@@ -34,8 +31,7 @@ int main(int argc, char** args) {
 		else if (t.type == -7) {
 			printf("=>%s\n", (t.nameAttr.get()->c_str()));
 		}
-
-		 else printf("\n");
+		else printf("\n");
 	}
 	return 0;
 
