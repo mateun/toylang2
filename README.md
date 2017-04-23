@@ -22,7 +22,7 @@ Release notes:
 	x = 12
 	y = 88
 	z = x + y / 9
-    ```   
+  ```   
 
 ### version 0.0.2: 
   * lexer recognises function declaration and function implementation, e.g. ```fn doThis(a, b)```
